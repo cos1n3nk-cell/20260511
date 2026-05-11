@@ -14,7 +14,12 @@ function preload() {
 
   // 載入 5 張耳環圖片
   for (let i = 1; i <= 5; i++) {
-    earringImages.push(loadImage(`pic/acc${i}_ring.png`));
+    // 根據需求載入圖片，特別注意第二款檔名為 acc2_ringl.png
+    let fileName = `pic/acc${i}_ring.png`;
+    if (i === 2) {
+      fileName = `pic/acc2_ringl.png`;
+    }
+    earringImages.push(loadImage(fileName));
   }
 }
 
